@@ -1,63 +1,49 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { Button } from 'react-native';
-import api from
+import jokeApi from './utilities/api'
+
 
 
 export default class App extends React.Component {
 
-  constructor(props) {
-    super(props);
+  constructor(props){
+    super(props)
     this.state = {
-      jokes: [],
-      permission: null,
+      joke: '',
     }
   }
 
-  async componentDidMount() {
-    await this.checkPremissionsAsync();
+  componentDidMount(){
+    api.jokePics().then((res) => {
+      this.setState({
+        joke: res.joke,
+      })
+    })
+        .catch((error) => {
+          console.error(error)
+        })
   }
-
-  checkPremissionsAsync = async () => {
-    const {status} = await Expo.Premissions.askAsync(Expo.Premissions.Contacts);
-    console.log(status);
-  }
-
-
-
-  showJokes = () => {
-
-  }
-
-  <Botton
-  onpress={onPressGetJoke}
-  title="Get Joke"
-  color="#841584"
-  accessibilityLabel="Get a Joke"
-  />
-
-
 
   render() {
 
     return (
       <View style={styles.container}>
-        <Text>DAD JOKES</Text>
+        <Text style ={styles.text}>{this.state.joke}</Text>
       </View>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
-  section: {
-    margin
-  }
   container: {
-    flex: 2,
-    backgroundColor: 'white',
+    flex: 1,
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-
-
   },
+  text: {
+    color: '#000',
+    fontSize: 15,
+    padding: 10
+  }
 });

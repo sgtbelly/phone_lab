@@ -1,7 +1,7 @@
-const jokeApi ={
-    dadJokes(){
-        const url = 'https://icanhazdadjoke.com/j/R7UfaahVfFd.png'
+const api = {
+    jokePics(){
+        const url = 'https://icanhazdadjoke.com/'
         return fetch(url).then((res) => res.json())
     }
 }
-module.exports = jokeApi
+module.exports = api;
