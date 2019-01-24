@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import jokeApi from './utilities/api'
+import api from './utilities/api.js';
 
 
 

@@ -1,6 +1,6 @@
 const api = {
     jokePics(){
-        const url = 'https://icanhazdadjoke.com/'
+        const url = 'https://icanhazdadjoke.com/';
         return fetch(url).then((res) => res.json())
     }
 }
