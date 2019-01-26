@@ -1,49 +1,92 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import api from './utilities/api.js';
+import { StyleSheet, Text, View, Animated, Button } from 'react-native';
+import TheJoke from './Screens/jokes.js';
+import getDadJoke from './utilities/api.js';
 
-
-
-export default class App extends React.Component {
-
-  constructor(props){
-    super(props)
-    this.state = {
-      joke: '',
-    }
+class FadeInView extends React.Component {
+  state = {
+    fadeAnim: new Animated.Value(0),
   }
 
-  componentDidMount(){
-    api.jokePics().then((res) => {
-      this.setState({
-        joke: res.joke,
-      })
-    })
-        .catch((error) => {
-          console.error(error)
-        })
+  componentDidMount() {
+    Animated.timing(
+        this.state.fadeAnim,
+        {
+          toValue: 1,
+          duration: 10000,
+        }
+    ).start();
   }
 
   render() {
+    let { fadeAnim } = this.state;
 
-    return (
-      <View style={styles.container}>
-        <Text style ={styles.text}>{this.state.joke}</Text>
-      </View>
-    )
+    return(
+        <Animated.View
+          style={{
+          ...this.props.style,
+          opacity: fadeAnim,
+          }}
+          >
+          {this.props.children}
+        </Animated.View>
+
+    );
   }
+}
+
+class App extends React.Component {
+    state = {
+        joke:'',
+        showJoke: false,
+    };
+
+  getJoke = () => {
+    getDadJoke()
+        .then(response =>
+            this.setState({
+              joke: response.data.joke,
+                showJoke: true,
+            })
+        );
+  };
+
+  render() {
+      return (
+          <View style={styles.container}>
+              <FadeInView style={styles.fadeIn}/>
+              <Text style={styles.text}>DAD JOKES</Text>
+              {this.state.showJoke ? <TheJoke joke={this.state.joke} /> : null}
+              <Button
+                  title={`Get A Dad Joke`}
+                  onPress={this.getJoke}
+              />
+
+          </View>
+      );
+  };
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#AFEEEE',
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: 0,
   },
   text: {
-    color: '#000',
-    fontSize: 15,
-    padding: 10
-  }
+    color: '#DEB887',
+    fontWeight: 'bold',
+    fontSize: 70,
+    textAlign: 'center',
+    textAlignVertical: 'top',
+    marginTop: 0,
+  },
+  fadeIn: {
+    width: 200,
+    height: 50,
+    },
 });
+
+export default App;
