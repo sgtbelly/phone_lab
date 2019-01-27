@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc8f145-122a-4226-895f-827c1649fc7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/phone_lab/Screens/jokes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_lab/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/phone_lab/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_lab/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/phone_lab/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_lab/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/phone_lab/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phone_lab/utilities/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/phone_lab/utilities/api.js" afterDir="false" />
-    </list>
+    <list default="true" id="9fc8f145-122a-4226-895f-827c1649fc7b" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -35,7 +28,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/phone_lab/Screens/jokes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="234">
               <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -72,10 +65,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="203" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="814" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -174,15 +166,15 @@
       <workItem from="1548318733475" duration="1467000" />
       <workItem from="1548383325580" duration="20519000" />
       <workItem from="1548475013038" duration="1965000" />
-      <workItem from="1548479046932" duration="9127000" />
+      <workItem from="1548479046932" duration="9364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45209000" />
+    <option name="totallyTimeSpent" value="45446000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="814" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10147992" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -198,7 +190,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5003524" side_tool="true" weight="0.5209657" />
       <window_info anchor="bottom" id="Quokka" order="10" />
-      <window_info active="true" anchor="bottom" x="664" y="172" width="601" height="565" id="Terminal" order="11" sideWeight="0.49964765" visible="true" weight="0.24005891" />
+      <window_info active="true" anchor="bottom" x="664" y="172" width="601" height="565" id="Terminal" order="11" sideWeight="0.49964765" visible="true" weight="0.20711564" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -286,7 +278,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/phone_lab/Screens/jokes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="234">
           <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />

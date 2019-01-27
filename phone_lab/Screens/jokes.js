@@ -40,6 +40,7 @@ class FadeInView extends React.Component {
                 <Text style={styles.joke}>{props.joke}</Text>
             </View>
         )
+
 }
 
 const styles = StyleSheet.create({
