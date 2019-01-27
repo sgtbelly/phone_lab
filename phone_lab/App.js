@@ -2,6 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View, Animated, Button } from 'react-native';
 import TheJoke from './Screens/jokes.js';
 import getDadJoke from './utilities/api.js';
+import Communications from 'react-native-communications';
+
 
 class FadeInView extends React.Component {
   state = {
@@ -35,6 +37,7 @@ class FadeInView extends React.Component {
   }
 }
 
+
 class App extends React.Component {
     state = {
         joke:'',
@@ -48,8 +51,15 @@ class App extends React.Component {
               joke: response.data.joke,
                 showJoke: true,
             })
+
         );
   };
+
+  sendSMS = payload =>{
+      console.log(payload);
+      Communications.textWithoutEncoding('',payload)
+  }
+
 
   render() {
       return (
@@ -61,6 +71,10 @@ class App extends React.Component {
                   title={`Get A Dad Joke`}
                   onPress={this.getJoke}
               />
+              { this.state.showJoke === true ? <Button style={{width:'50%;', borderRadius: 4, padding: 24 }}
+                  title={'TEXT JOKE'}
+                  onPress={()=>{this.sendSMS(this.state.joke)}}
+                  /> :null }
 
           </View>
       );
@@ -90,3 +104,4 @@ const styles = StyleSheet.create({
 });
 
 export default App;
+
